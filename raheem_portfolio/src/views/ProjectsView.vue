@@ -75,9 +75,10 @@ import { ref } from 'vue'
 const projects = ref([
   {
     id: 1,
-    title: 'Booking App',
-    description: 'A platform for booking public spaces in Kinondoni.',
-    stack: 'Vue, Django, GraphQL',
+    title: 'Public Open Space Application',
+    description: "The mobile-Cross Platform Application for encouraging direct\
+                 Citizen Participation in Reporting the illegal use of public open space",
+    stack: 'Flutter, Django, GraphQL,Postgresql',
     image: 'https://source.unsplash.com/random/301x200?app',
     link: '#',
     demo: '#',
@@ -93,9 +94,9 @@ const projects = ref([
   },
   {
     id: 3,
-    title: 'Admin Dashboard',
-    description: 'A clean dashboard UI for managing users and spaces.',
-    stack: 'Django, Vue',
+    title: 'Upcoming Projects',
+    description: 'My Coming New Projects will be here',
+    stack: 'Not Thinked',
     image: 'https://source.unsplash.com/random/303x200?dashboard',
     link: '#',
     demo: '#',
@@ -115,7 +116,7 @@ const projects = ref([
 
 .project-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.116) !important;
 }
 
 .v-img {

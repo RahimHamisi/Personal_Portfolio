@@ -1,8 +1,12 @@
 <template>
-  <DefaultLayout />
-  <SocialLinks />
+  <v-app>
+     <DefaultLayout />
+      <AppFooter />
+      
+  </v-app>
+ 
 </template>
 <script setup lang="ts">
 import DefaultLayout from '@/layouts/DefaultLayout.vue'
-import SocialLinks from './components/SocialLink.vue';
+import AppFooter from './components/AppFooter.vue'
 </script>

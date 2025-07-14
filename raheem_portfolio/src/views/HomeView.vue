@@ -3,7 +3,7 @@
     <v-row align="center" justify="center">
       <v-col cols="12" md="6" class="text-left">
         <h1 class="text-h2 font-weight-bold mb-4">
-          Hi, I'm <span class="gradient-text">Heem Raheem</span>
+          Hi, I'm <span class="gradient-text">Raheem</span>
         </h1>
         <p class="text-h6 text-grey-lighten-1">
           Software Developer — I build modern apps using Vue, Django, Flutter
@@ -12,7 +12,7 @@
       <v-col cols="12" md="6" class="text-center">
         <v-avatar size="200" class="profile-avatar">
           <v-img
-            src="@/assets/images/profile.jpg"
+            src="../assets/images/profile.jpg"
             alt="Profile Picture"
             cover
           ></v-img>
@@ -28,7 +28,7 @@
 }
 
 .gradient-text {
-  background: linear-gradient(90deg, #0288d1, #00acc1);
+  background: linear-gradient(50deg, #ed05e9, #3b3fc2);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -43,3 +43,4 @@
   box-shadow: 0 8px 24px rgba(255, 255, 255, 0.1) !important;
 }
 </style>
+

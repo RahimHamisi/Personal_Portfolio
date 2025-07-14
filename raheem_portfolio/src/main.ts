@@ -1,11 +1,12 @@
-import { createApp } from 'vue';
-import { createVuetify } from 'vuetify';
-import 'vuetify/styles';
-import * as components from 'vuetify/components';
-import * as directives from 'vuetify/directives';
-import App from './App.vue';
-import SocialLinks from './components/SocialLink.vue';
-import { aliases, mdi } from 'vuetify/iconsets/mdi';
+import { createApp } from 'vue'
+import { createVuetify } from 'vuetify'
+import 'vuetify/styles'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
+import App from './App.vue'
+// import AppFooter from './components/AppFooter.vue'
+import { aliases, mdi } from 'vuetify/iconsets/mdi'
+import '@mdi/font/css/materialdesignicons.css'
 
 const vuetify = createVuetify({
   theme: {
@@ -13,7 +14,7 @@ const vuetify = createVuetify({
     themes: {
       dark: {
         colors: {
-          primary: '#0288d1',
+          primary: '#d102c7ff',
           background: '#121212',
         },
       },
@@ -26,9 +27,8 @@ const vuetify = createVuetify({
   },
   components,
   directives,
-});
+})
 
-const app = createApp(App);
-app.component('SocialLinks', SocialLinks);
-app.use(vuetify);
-app.mount('#app');
+const app = createApp(App)
+app.use(vuetify)
+app.mount('#app')
