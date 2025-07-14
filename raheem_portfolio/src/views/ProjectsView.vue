@@ -116,7 +116,7 @@ const projects = ref([
 
 .project-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.116) !important;
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.1) !important;
 }
 
 .v-img {

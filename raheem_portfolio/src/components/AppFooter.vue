@@ -1,11 +1,11 @@
 <template>
-  <v-footer class="footer-container pa-12" app>
+  <v-footer class="footer-container pa-12">
     <v-container>
       <v-row>
         <v-col cols="12" md="4">
           <h4 class="text-h6 text-white mb-4">About Me</h4>
           <p class="text-body-2 text-grey-lighten-1">
-            I'm a full-stack developer passionate about building web and mobile apps. I focus on Building and solving Real world problem using software.
+            I'm a full-stack developer passionate about building web and mobile apps. I focus on building and solving real-world problems using software.
           </p>
         </v-col>
         <v-col cols="12" md="4">
@@ -50,7 +50,7 @@
       <v-divider class="my-6" color="grey-darken-2"></v-divider>
       <v-row justify="center">
         <span class="text-grey-lighten-1 text-caption text-center">
-          &copy; {{ new Date().getFullYear() }} RAHIM RAMADHANI HAMISI. All rights reserved.
+          © {{ new Date().getFullYear() }} RAHIM RAMADHANI HAMISI. All rights reserved.
         </span>
       </v-row>
     </v-container>
@@ -66,32 +66,11 @@ const links = [
 ];
 
 const socialLinks = [
-  {
-    name: 'Facebook',
-    icon: 'mdi-facebook',
-    link: '',
-  },
-  {
-    name: 'GitHub',
-    icon: 'mdi-github',
-    link: '',
-  },
-   {
-    name: 'Instagram',
-    icon: 'mdi-instagram',
-    link: '',
-  },
-  {
-    name: 'LinkedIn',
-    icon: 'mdi-linkedin',
-    link: '',
-  },
-  {
-    name: 'Twitter',
-    icon: 'mdi-twitter',
-    link: '',
-  }
- 
+  { name: 'Facebook', icon: 'mdi-facebook', link: '' },
+  { name: 'GitHub', icon: 'mdi-github', link: '' },
+  { name: 'Instagram', icon: 'mdi-instagram', link: '' },
+  { name: 'LinkedIn', icon: 'mdi-linkedin', link: '' },
+  { name: 'Twitter', icon: 'mdi-twitter', link: '' },
 ];
 </script>
 
@@ -104,7 +83,27 @@ const socialLinks = [
 }
 
 .hover-link:hover {
-  color: #d102c7ff;
+  color: #d102c7;
   text-decoration: underline;
+}
+
+/* Sticky footer styles */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.footer-container {
+  flex-shrink: 0;
 }
 </style>
