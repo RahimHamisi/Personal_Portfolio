@@ -2,61 +2,72 @@
   <v-container fluid class="py-12 px-4 px-md-8 contact-container">
     <v-row justify="center">
       <v-col cols="12" md="8" lg="6">
-        <v-card class="contact-card pa-6 pa-md-8" elevation="6" rounded="lg">
-          <h2 class="text-h3 font-weight-bold mb-6 text-primary text-center">
-            Get in Touch
-          </h2>
-          <p class="text-body-1 text-grey-lighten-1 mb-8 text-center">
-            Feel free to reach out with any questions or opportunities!
-          </p>
-          <v-form v-model="valid" ref="form" @submit.prevent="submitForm">
-            <v-text-field
-              v-model="form.name"
-              label="Name"
-              outlined
-              dense
-              class="mb-4"
-              :rules="nameRules"
-              prepend-inner-icon="mdi-account"
-              color="primary"
-              rounded
-            ></v-text-field>
-            <v-text-field
-              v-model="form.email"
-              label="Email"
-              outlined
-              dense
-              class="mb-4"
-              :rules="emailRules"
-              prepend-inner-icon="mdi-email"
-              color="primary"
-              rounded
-            ></v-text-field>
-            <v-textarea
-              v-model="form.message"
-              label="Message"
-              outlined
-              rows="5"
-              class="mb-6"
-              :rules="messageRules"
-              prepend-inner-icon="mdi-message-text"
-              color="primary"
-              rounded
-            ></v-textarea>
-            <v-btn
-              type="submit"
-              color="primary"
-              large
-              block
-              rounded="md"
-              class="text-capitalize py-6"
-              :disabled="!valid"
-              :loading="loading"
-            >
-              Send Message
-            </v-btn>
-          </v-form>
-        </v-card>
+        <div class="rotating-border-wrapper">
+            <v-card class="contact-card pa-6 pa-md-8" elevation="6" rounded="lg" 
+                            v-animateonscroll="{ 
+                                enterClass: 'fade-in-up', 
+                                leaveClass: 'fade-out' 
+                            }">
+                <h2 class="text-h3 font-weight-bold mb-6 text-primary text-center"
+                v-animateonscroll="{ enterClass: 'fade-in-up' }"
+                >
+                    Get in Touch
+                </h2>
+                <p class="text-body-1 text-grey-lighten-1 mb-8 text-center"
+                    v-animateonscroll="{ enterClass: 'fade-in-up', leaveClass: 'fade-out' }"
+                >
+                    Feel free to reach out with any questions or opportunities!
+                </p>
+                <v-form v-model="valid" ref="form" @submit.prevent="submitForm">
+                    <v-text-field
+                    v-model="form.name"
+                    label="Name"
+                    outlined
+                    dense
+                    class="mb-4"
+                    :rules="nameRules"
+                    prepend-inner-icon="mdi-account"
+                    color="primary"
+                    rounded
+                    ></v-text-field>
+                    <v-text-field
+                    v-model="form.email"
+                    label="Email"
+                    outlined
+                    dense
+                    class="mb-4"
+                    :rules="emailRules"
+                    prepend-inner-icon="mdi-email"
+                    color="primary"
+                    rounded
+                    ></v-text-field>
+                    <v-textarea
+                    v-model="form.message"
+                    label="Message"
+                    outlined
+                    rows="5"
+                    class="mb-6"
+                    :rules="messageRules"
+                    prepend-inner-icon="mdi-message-text"
+                    color="primary"
+                    rounded
+                    ></v-textarea>
+                    <v-btn
+                    type="submit"
+                    color="primary"
+                    large
+                    block
+                    rounded="md"
+                    class="text-capitalize py-6"
+                    :disabled="!valid"
+                    :loading="loading"
+                    >
+                    Send Message
+                    </v-btn>
+                </v-form>
+            </v-card>
+        </div>
+        
       </v-col>
     </v-row>
   </v-container>
@@ -132,4 +143,42 @@ const submitForm = async (): Promise<void> => {
 .v-btn:hover {
   background-color: #0288d1 !important;
 }
+.rotating-border-wrapper {
+  position: relative;
+  border-radius: 20px;
+  padding: 4px;
+  z-index: 0;
+}
+
+.rotating-border-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+  border-radius: inherit;
+  background: conic-gradient(
+    from 0deg,
+    #d102c7,
+    #6600ff,
+    #d102c7,
+    #6600ff,
+    #d102c7
+  );
+  background-size: 150% 150%;
+  animation: rotate-border 4s linear infinite;
+}
+
+@keyframes rotate-border {
+  0% {
+    transform: rotate(0turn);
+  }
+  50% {
+    transform: rotate(1turn);
+  }
+}
+
+
 </style>

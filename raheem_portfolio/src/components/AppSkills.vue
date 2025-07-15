@@ -1,5 +1,5 @@
 <template>
-  <v-chip-group column class="d-flex flex-wrap mb-6">
+  <v-chip-group column class="d-flex flex-wrap mb-6"  v-animateonscroll="{ enterClass: 'fade-in-up' }">
     <v-chip
       v-for="skill in skills"
       :key="skill"

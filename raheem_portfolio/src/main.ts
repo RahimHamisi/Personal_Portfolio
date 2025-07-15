@@ -3,6 +3,8 @@ import { createVuetify } from 'vuetify'
 import 'vuetify/styles'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
+import animateOnScroll from '@/directives/animateOnScroll.ts'
+import '@/assets/animations.css';
 import App from './App.vue'
 // import AppFooter from './components/AppFooter.vue'
 import { aliases, mdi } from 'vuetify/iconsets/mdi'
@@ -31,4 +33,5 @@ const vuetify = createVuetify({
 
 const app = createApp(App)
 app.use(vuetify)
+app.directive('animateonscroll', animateOnScroll);
 app.mount('#app')

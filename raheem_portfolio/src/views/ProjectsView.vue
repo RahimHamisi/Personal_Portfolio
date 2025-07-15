@@ -2,7 +2,7 @@
   <v-container fluid class="py-12 px-4 px-md-8 project-container">
     <v-row justify="center">
       <v-col cols="12" md="10" lg="8">
-        <h2 class="text-h3 font-weight-bold mb-8 text-primary">My Projects</h2>
+        <h2 class="text-h3 font-weight-bold mb-8 text-primary"  v-animateonscroll="{ enterClass: 'fade-in-up' }">My Projects</h2>
         <v-row>
           <v-col
             v-for="project in projects"
@@ -11,7 +11,11 @@
             sm="6"
             md="4"
             class="d-flex"
-          >
+            v-animateonscroll="{ 
+                    enterClass: 'fade-in-up', 
+                    leaveClass: 'fade-out' 
+                }"
+            >
             <v-card
               class="project-card d-flex flex-column"
               elevation="6"
@@ -126,4 +130,41 @@ const projects = ref([
 .v-img:hover {
   opacity: 0.95;
 }
+.animated-border-wrapper {
+  position: relative;
+  border-radius: 16px;
+  padding: 2px;
+  z-index: 0;
+}
+
+.animated-border-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: conic-gradient(
+    from 0deg,
+    #d102c7,
+    #6600ff,
+    #d102c7,
+    #6600ff,
+    #d102c7
+  );
+  border-radius: 16px;
+  z-index: -1;
+  animation: spin-border 3s linear infinite;
+  background-size: 300% 300%;
+}
+
+@keyframes spin-border {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
 </style>

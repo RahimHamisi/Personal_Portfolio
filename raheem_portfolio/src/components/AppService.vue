@@ -50,7 +50,11 @@ const services = computed(() =>
   <v-container fluid class="py-12 px-4 px-md-8 service-container">
     <v-row justify="center">
       <v-col cols="12" md="10" lg="8">
-        <h2 class="text-h3 font-weight-bold mb-8 text-primary">What I Do</h2>
+        <h2 class="text-h3 font-weight-bold mb-8 text-primary" 
+        v-animateonscroll="{ enterClass: 'fade-in-up', leaveClass: 'fade-out' }"
+        >
+        What I Do
+        </h2>
         <v-row>
           <v-col
             v-for="service in services"
@@ -59,6 +63,7 @@ const services = computed(() =>
             sm="6"
             md="4"
             class="d-flex"
+            v-animateonscroll="{ enterClass: 'fade-in-up' }"
           >
             <v-card
               class="service-card d-flex flex-column"
