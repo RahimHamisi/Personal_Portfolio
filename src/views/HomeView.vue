@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import profileImage from '@/assets/images/profile.jpg' // Use the correct alias to load the image
+import profileImage from '@/assets/images/MY_PROFILE.jpg' // Use the correct alias to load the image
 </script>
 
 <template>

@@ -145,8 +145,8 @@ const submitForm = async (): Promise<void> => {
 }
 .rotating-border-wrapper {
   position: relative;
-  border-radius: 20px;
-  padding: 4px;
+  border-radius: 5px;
+  padding: 1px;
   z-index: 0;
 }
 
@@ -175,7 +175,7 @@ const submitForm = async (): Promise<void> => {
   0% {
     transform: rotate(0turn);
   }
-  50% {
+  100% {
     transform: rotate(1turn);
   }
 }

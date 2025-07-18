@@ -28,3 +28,9 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+
+.netlify
+node_modules/
+dist/
+.env
+*.log
